@@ -2,8 +2,6 @@
 
 `systeminfo` → Obtenir des renseignements sur le système
 
-`net users /domain [username]` → Obtenir des renseignements sur les utilisateurs
-
 `tasklist` → Lister les processus
 
 `netstat -ano` → Liste des connexions tcp
@@ -24,6 +22,9 @@
 
 `wmic useraccount where name='user'` → Récupère des informations sur un utilisateur (SID)
 
+`net users [username]` pour obtenir des renseignements sur les utilisateurs
+
+`net account` information sur la politique de mot de passe
 
 <h2>Powershell</h2>
 
