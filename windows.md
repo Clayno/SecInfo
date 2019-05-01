@@ -29,6 +29,13 @@
 ## Samba
 
 #### smbclient
+
+Trouver la version
+
+```
+nmap -v -sSVC -p445 --script smb-os-discovery host
+```
+
 Exemple de share connus: IPC$, 
 Connexion en tant qu'utilisateur Guest
 
@@ -45,6 +52,7 @@ smbclient -U "" -N \\\\host\\share
 Énumération de share
 
 ```
+smbclient -U "" -N -L \\\\host\\share
 nmap -v --script smb-enum-shares -p U:137,T:139 host
 ```
 
