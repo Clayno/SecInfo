@@ -93,10 +93,16 @@ COPY shell.asp;.jpg
 
 ## SMTP
 
-Connexion SSL
+Connexion TLS (début plaintext puis TLS)
 
 ```
 openssl s_client -connect 1.2.3.4:587 -starttls smtp
+```
+
+Connexion SSL 
+
+```
+openssl s_client -connect 1.2.3.4:465 -crlf
 ```
 
 ## Privesc
