@@ -91,6 +91,14 @@ PUT shell.jpg
 COPY shell.asp;.jpg
 ```
 
+## SMTP
+
+Connexion SSL
+
+```
+openssl s_client -connect 1.2.3.4:587 -starttls smtp
+```
+
 ## Privesc
 
 Créer un service (groupe administrateur):
